@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:attribute name="Desctwo"  type="String" default="This is from second component"/>
+    <aura:attribute name="empname2"  type="String"/>
+    {!v.Desctwo}<br/>
+    Name : {!v.empname2}<br/>
+</aura:component>

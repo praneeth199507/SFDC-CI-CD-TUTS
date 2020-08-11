@@ -1,0 +1,9 @@
+<aura:component >
+	<aura:attribute name="myName" type="String"/>
+    <aura:attribute name="myage" type="String"/>
+    <aura:handler event="c:Event_Two" action="{!c.jump}" />
+    <div>
+        Name From 2nd : <br/>
+        Age from 2nd : {!v.myage}<br/>
+    </div>
+</aura:component>

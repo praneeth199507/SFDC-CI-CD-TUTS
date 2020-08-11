@@ -1,0 +1,18 @@
+<aura:component >
+    <aura:attribute name="savevalue" type="String"/>
+    <aura:attribute name="seconddp" type="String[]" default="First,Learn,Explore,Survive"/>
+    <lightning:select label="MyFirstDropdown" name="xcv" value="{!v.savevalue}" >
+    <option value="">--None--</option>
+    <option value="1">Praneeth</option>
+    <option value="2">Krishna</option>
+    <option value="3">Reddy</option>    
+    </lightning:select>
+  
+    <lightning:select label="MysecondDropdown" name="xcv"  >
+    <aura:iteration items="{!v.seconddp}" var="itr">
+    <option value="{!itr}">{!itr}</option>
+    </aura:iteration>
+        </lightning:select>
+    
+    
+</aura:component>

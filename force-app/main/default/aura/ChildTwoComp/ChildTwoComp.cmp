@@ -1,0 +1,12 @@
+<aura:component >
+    <aura:attribute name="allit" type="integer" />
+    
+    <aura:handler  event="c.LearnEvent"  action="{!c.handlereevent}"  />
+    <lightning:card>
+        <BR/>
+        <c:ChildComp/>
+        second branch parent value = {!v.allit}
+        <BR/>
+    </lightning:card>  
+    
+</aura:component>

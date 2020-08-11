@@ -1,0 +1,11 @@
+<aura:component >
+    <aura:attribute name="id" type="Integer" />
+    <aura:attribute name="message" type="String" default="none" />
+    <aura:handler event="c:LightningApplicationEvent" action="{!c.handleApplicationEvent}" phase="default" />
+    <div class="outerComponent"> 
+        Outer Component <br />    
+        Event container id = {!v.id}  <br />       
+        Message in Event Container = {!v.message} <br />       
+        <c:LightningAppComp1 id="{!v.id}" />
+    </div>	
+</aura:component>

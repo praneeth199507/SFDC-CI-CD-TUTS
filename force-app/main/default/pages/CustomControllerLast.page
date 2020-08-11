@@ -1,0 +1,40 @@
+<apex:page controller="RelatedContacts">
+    <apex:form >
+        <apex:pageBlock title="Accounts Info">
+            <apex:pageBlockSection >
+                <apex:pageBlockSectionItem >
+                    
+                <apex:outputLabel value="Time Spent On Page : {!count}" id="counter"/>
+                </apex:pageBlockSectionItem>
+                <apex:actionPoller action="{!incrementcounter}" reRender="counter" interval="5"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection >
+                <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Select Account"/>
+            <apex:selectList value="{!selectedaccount}" size="1">
+                <apex:selectOptions value="{!allaccounts}"/>
+             <apex:actionSupport event="onchange" action="{!getRelatedContacts}" rerender="Rc" status="loadrecords" />
+               
+            </apex:selectList> 
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+         <apex:pageBlock title="Related Contacts" id="Rc">
+          <apex:actionStatus id="loadrecords">
+          <apex:facet name="start">
+              
+          </apex:facet>
+           <apex:facet name="stop">
+               <apex:pageBlockTable value="{!allcontacts}" var="itr">
+                   <apex:column value="{!itr.name}"/>
+                   <apex:column value="{!itr.email}"/>              
+               </apex:pageBlockTable>
+          </apex:facet>
+          </apex:actionStatus>  
+        
+        </apex:pageBlock> 
+    
+    
+    </apex:form>
+</apex:page>

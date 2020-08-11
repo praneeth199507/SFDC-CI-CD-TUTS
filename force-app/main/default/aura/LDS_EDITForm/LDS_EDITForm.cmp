@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<lightning:recordEditForm  objectApiName="Account">
+         <div class="slds-box">
+     <lightning:inputField fieldName="Name" />
+        <lightning:inputField fieldName="Industry"/>
+        <lightning:inputField fieldName="Phone"/>
+        <lightning:button type="submit" label="Save" variant="brand"/>  
+        </div> 
+    </lightning:recordEditForm>
+</aura:component>

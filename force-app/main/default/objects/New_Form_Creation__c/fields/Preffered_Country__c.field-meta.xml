@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preffered_Country__c</fullName>
+    <externalId>false</externalId>
+    <label>Preffered Country</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>GERMANY</fullName>
+                <default>false</default>
+                <label>GERMANY</label>
+            </value>
+            <value>
+                <fullName>INDIA</fullName>
+                <default>false</default>
+                <label>INDIA</label>
+            </value>
+            <value>
+                <fullName>NEW ZEALAND</fullName>
+                <default>false</default>
+                <label>NEW ZEALAND</label>
+            </value>
+            <value>
+                <fullName>PAKISTAN</fullName>
+                <default>false</default>
+                <label>PAKISTAN</label>
+            </value>
+            <value>
+                <fullName>SRILANKA</fullName>
+                <default>false</default>
+                <label>SRILANKA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

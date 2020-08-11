@@ -1,0 +1,61 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+    <br></br>  
+    <aura:attribute name="firstname" type="String" />
+    <aura:attribute name="lastname" type="String"/>
+    <aura:attribute name="yearsofexp" type="String[]" default="None Selected,Less Than 3 Years,From 3 to 6 Years,More Than 6 Years"/>
+    <aura:attribute name="mobileno" type="Integer" default=""/>
+    <aura:attribute name="workedearlierinsameorg" type="list"  default = "[{'label':'Yes','value':'Option1'},
+                                                                           {'label':'No','value':'Option2'}]"/>
+    <aura:attribute name="rvalue" type="String" default=""/>
+    <aura:attribute name="abc" type="boolean" default="true"/>
+    <aura:attribute name="checkboxvalue" type="boolean" default="false"/>
+    <aura:attribute name="header" type="string" default="Registration Form For New Candidates"/>
+    <aura:attribute name="addedudetails" type="list" default="[]"/>
+   
+    <div class="slds-page-header__title">
+         <div class="slds-m-top--XX-large">
+      <div class="slds-align_absolute-center"> 
+         {!v.header}
+            </div>
+       </div>
+    </div>
+     <br></br>  
+     <div class="slds-size_3-of-7">
+    <lightning:input label="First Name" name="cname" required="true" value="{!v.firstname}"/>
+    <br></br>
+    <lightning:input label="Last Name" name="lname" value="{!v.lastname}"/>
+    <br></br>
+    <lightning:input label="Mobile No" type="formattedPhone" value="{!v.mobileno}"/>
+    <br></br>
+    <lightning:select label="Total Exp in Years" name="Years">
+    <aura:iteration items="{!v.yearsofexp}" var = "exp">
+             <option text="{!exp}">
+        </option>
+     </aura:iteration>
+    </lightning:select>
+     <br></br>              
+    <lightning:radioGroup label="worked earlier in same org" type="Radio" required="true"
+                          options="{!v.workedearlierinsameorg}" value="{!v.rvalue}"/>
+      <br></br>  
+   <lightning:button iconName="utility:add" variant="border-filled" label = "Add Educational Details" onclick="{!c.adddetails}"/>
+      <br></br>    
+         <hr/> 
+   <aura:iteration items="{!v.addedudetails}" var="item" indexVar="index">
+       <c.EducationDetails deledudetails="{!v.addedudetails}" indexNo="{!index}"/>  
+       <hr/>
+   </aura:iteration>     
+         
+    <br></br>
+    <lightning:input aura:id="chkbx" onchange="{!c.aftercheck}" type="checkbox" label="Read terms and conditions. I agree" name="cb"/>
+    <br></br>
+         <aura:if isTrue="{!v.checkboxvalue}">
+             <i>You Agreed to company's terms and conditions</i>
+             <br></br>
+         </aura:if>
+     <br></br>
+    <lightning:button variant="brand" label="Submit" onclick="{!c.aftersubmit}">
+     </lightning:button>   
+    </div>
+                          
+</aura:component>

@@ -1,0 +1,42 @@
+<aura:component >
+    <lightning:card title="Accounts" footer="Testing-Footer" >
+     <p>This is Line One</p>
+        This is Line Two
+        <p>This is Line Three</p>
+			This is Line Four
+    </lightning:card>
+    
+    <lightning:card title="Accounts" iconName="standard:contact">
+     <p>This is Line One</p>
+        This is Line Two
+        <p>This is Line Three</p>
+			This is Line Four
+    </lightning:card>
+    
+        <lightning:card title="Accounts" iconName="standard:account">
+            <aura:set attribute="actions">
+                <lightning:button label="Submit"/>
+               	<lightning:button label="Edit"/>
+                	<lightning:button label="Save"/>
+            </aura:set>
+     <p>This is Line One</p>
+        This is Line Two
+        <p>This is Line Three</p>
+    </lightning:card>
+    
+     <lightning:card title="Accounts" iconName="standard:account">
+         <aura:set attribute="actions">
+                <lightning:button label="Submit"/>
+               	<lightning:button label="Edit"/>
+                	<lightning:button label="Save"/>
+            </aura:set>
+            <aura:set attribute="footer">
+                <lightning:button label="cancel"/>
+               	<lightning:button label="Ok"/>
+            </aura:set>
+     <p>This is Line One</p>
+        This is Line Two
+        <p>This is Line Three</p>
+    </lightning:card>
+    
+</aura:component>

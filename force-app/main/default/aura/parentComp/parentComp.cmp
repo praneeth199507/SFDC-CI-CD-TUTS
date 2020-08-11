@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute name="Bvalue" type="integer" default="20" />
+    <aura:handler  event="c.LearnEvent"  action="{!c.handleeevent}" phase='capture'/>
+      <c:ChildComp/> 
+    <lightning:card>
+        <BR/>
+    First Parent branch value = {!v.Bvalue}
+    </lightning:card>
+</aura:component>

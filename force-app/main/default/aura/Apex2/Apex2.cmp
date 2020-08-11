@@ -1,0 +1,16 @@
+<aura:component controller="Notlooser2">
+    <aura:attribute name="acc" type="List"/> 
+    <aura:attribute name="columns" type="object"/> 
+    <lightning:input label="Name" aura:id="fname" type="text"/>
+   <lightning:button  label="Submit" onclick="{!c.invoke}" /> 
+    <lightning:dataTable keyField="id" data="{!v.acc}" columns="{!v.columns}" />
+    
+    
+    
+    <!-- <aura:handler name="init" value="{!this}" action="{!c.invoke}"/> --> 
+  <!--  <aura:iteration items="{!v.acc}" var="a">     
+     <h1>{!a.Name} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{!a.StageName}  </h1>   
+    </aura:iteration> -->
+    
+	
+</aura:component>

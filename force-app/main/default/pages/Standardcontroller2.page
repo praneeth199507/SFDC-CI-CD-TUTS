@@ -1,0 +1,22 @@
+<apex:page standardController="Account" recordSetVar="acc"  tabstyle="account">
+    <apex:form >
+    <apex:pageBlock title="Custom Output">
+        <apex:selectList value="{!filterid}" size="1" >
+            <apex:selectOptions value="{!listviewoptions}"/>
+        </apex:selectList>
+        <apex:commandButton value="Go" action="{!list}"/>
+    <apex:pageBlockTable columns="3" value="{!acc}" var="itr">
+        <apex:column value="{!itr.name}"/>
+        <apex:column value="{!itr.AccountNumber}"/>
+        <apex:column value="{!itr.site}"/>
+        </apex:pageBlockTable>   
+        <apex:panelGrid columns="4"  >
+        <apex:commandLink action="{!first}">First</apex:commandLink>
+           <apex:commandLink action="{!previous}">Previous</apex:commandLink>
+           <apex:commandLink action="{!next}">Next</apex:commandLink>
+           <apex:commandLink action="{!last}">Last</apex:commandLink>
+        </apex:panelGrid>
+    </apex:pageBlock>
+      
+        </apex:form>
+</apex:page>

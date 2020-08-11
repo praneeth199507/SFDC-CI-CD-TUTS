@@ -1,0 +1,24 @@
+<apex:page controller="FirstWrapper" sidebar="true">
+    <apex:form >
+    <apex:pageBlock title="Accounts Info">
+        		<apex:pageBlockTable value="{!acclist}" var="itr">
+              <apex:column headerValue="Select">
+               <apex:inputCheckbox selected="{!itr.isselected}" />
+                    </apex:column>
+             <apex:column headerValue="Account" value="{!itr.accountname}"/>
+               <apex:column headerValue="Industry" value="{!itr.industryname}"/>
+                    </apex:pageBlockTable> 
+        <apex:pageBlockButtons >
+        <apex:commandButton value="Display" action="{!filterlogic}" rerender="refres"/>
+        </apex:pageBlockButtons>
+        </apex:pageBlock>
+        
+           <apex:pageBlock title="Selected Accounts Info" id="refres">
+        		<apex:pageBlockTable value="{!accselected}" var="itr1">
+             <apex:column headerValue="Account" value="{!itr1.accountname}"/>
+               <apex:column headerValue="Industry" value="{!itr1.industryname}"/>
+                    </apex:pageBlockTable>       
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

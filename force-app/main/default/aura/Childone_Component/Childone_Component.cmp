@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:attribute name="ename" type="String" />
+        <aura:attribute name="eage" type="decimal" />
+	
+    Basic Info :<br/>
+    Name : {!v.ename}<br/>
+    Age : {!v.eage}<br/>
+</aura:component>

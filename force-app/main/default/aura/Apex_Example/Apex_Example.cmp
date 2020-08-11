@@ -1,0 +1,9 @@
+<aura:component controller="NotLooser">
+    <aura:attribute name="fname" type="String"/>
+    <aura:attribute name="names" type="String[]" default="praneeth,pramodh,punith,pranesh"/>
+    <aura:iteration items="{!v.names}" var="itr">
+   <p>{!itr} </p> 
+    </aura:iteration>
+    <aura:handler name="init" value="{!this}" action="{!c.display}"/>
+    Employee Name:{!v.fname}
+</aura:component>

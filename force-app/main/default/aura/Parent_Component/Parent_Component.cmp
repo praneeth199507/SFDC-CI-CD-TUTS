@@ -1,0 +1,21 @@
+<aura:component >
+    <aura:attribute name="name" type="String" />
+    <aura:attribute name="age" type="decimal" />
+    <aura:attribute name="city" type="String" />
+    <aura:attribute name="place" type="String" />
+    
+    Student :
+    Name : {!v.name}<br/>
+    Age : {!v.age}<br/>
+    City : {!v.city}<br/>
+    Place : {!v.place}<br/><br/><br/>
+    
+    <c:Childone_Component ename="{!v.name}" eage="{!v.age}" /><br/><br/><br/>
+    <c:Childtwo_Component city="{!v.city}" place="{!v.place}"/><br/><br/><br/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.show}" />
+    
+    <lightning:button label="Submit" onclick="{!c.invoke}" />
+    
+    
+</aura:component>

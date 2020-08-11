@@ -1,0 +1,26 @@
+<aura:component >
+    <aura:attribute name="aval" type="decimal" />
+    <aura:attribute name="bval" type="decimal" />
+    <aura:attribute name="cval" type="decimal" />
+     <aura:handler name="init" value="{!this}" action="{!c.jump}" />
+    <Div >
+    Aval : {!v.aval}<br/>
+    Bval : {!v.bval}<br/><br/>
+    Cval : {!v.cval}<br/>
+    </Div>
+    
+    <Div class="box" >
+    Aval : {!v.aval}<br/>
+    Bval : {!v.bval}<br/><br/>
+    Cval : {!v.cval}<br/>
+    </Div>
+    
+     <Div class="bigbox" >
+    <p> This is praneeth welcome to lightning  </p>
+    <p> This is praneeth welcome to lightning   </p>
+    <p> This is praneeth welcome to lightning     </p>
+    </Div>
+
+   
+    
+</aura:component>

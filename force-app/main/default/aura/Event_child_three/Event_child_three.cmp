@@ -1,0 +1,9 @@
+<aura:component >
+	<aura:attribute name="mName" type="String"/>
+    <aura:attribute name="mage" type="String"/>
+    <aura:handler event="c:Event_Two" action="{!c.pump}" />
+    <div>
+        Name From 2nd : {!v.mName}<br/>
+        Age from 2nd : {!v.mage}<br/>
+    </div>
+</aura:component>

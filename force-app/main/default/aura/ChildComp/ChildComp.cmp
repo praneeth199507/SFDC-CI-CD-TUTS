@@ -1,0 +1,7 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction,lightning:actionOverride" access="global" >
+    <aura:attribute name="Avalue" type="integer" default="100" />
+        <aura:handler  event="c.LearnEvent"  action="{!c.handleevent}" phase='capture'/>
+     Child Component  Value = {!v.Avalue}
+    <BR/>
+    <lightning:button label="ChildButton" onclick="{!c.handlechildbutton}"/>
+</aura:component>

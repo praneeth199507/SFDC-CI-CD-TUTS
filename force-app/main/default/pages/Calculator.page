@@ -1,0 +1,26 @@
+<apex:page controller="CaluculatorCTRL" >
+    <apex:form >
+    <apex:pageBlock title="Praneeth's Calculator" id="dancing">
+        <apex:pageBlockSection columns="1">
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="First Number"/>
+                 <apex:inputtext value="{!firstnum}" />
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Second Number"/>
+                <apex:inputtext value="{!secondnum}"/>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Result"/>
+                <apex:inputtext value="{!resultnum}"/>
+            </apex:pageBlockSectionItem>        
+        </apex:pageBlockSection>
+      <apex:pageBlockButtons location="bottom">
+          <apex:commandButton value="ADD" action="{!add}" rerender="dancing"/>
+         <apex:commandButton value="SUBTRACT" action="{!sub}" rerender="dancing"/>
+           <apex:commandButton value="MULTIPLY" action="{!mul}" rerender="dancing"/>
+        </apex:pageBlockButtons>
+       </apex:pageBlock>
+    </apex:form>
+        
+</apex:page>

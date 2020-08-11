@@ -1,0 +1,4 @@
+<aura:component >
+    <lightning:button label="Push Data" onclick="{!c.dosome}"/>
+    <c:Child2 aura:id="namaste"/>
+</aura:component>

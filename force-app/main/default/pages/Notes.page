@@ -1,0 +1,15 @@
+<apex:page >
+    <script>
+      function validateInput(){
+         var customerpriority = document.getElementById('pg.formfirst.pb.pbss.cp').value; 
+          var expirydate = document.getElementById('pg.formfirst.pb.pbss.ed').value; 
+          if(customerpriority == "" || expirydate == "" ){
+              alert('Please fill additional details');
+              }
+          else{
+              callSave();
+              }
+    
+    }
+    </script>
+</apex:page>

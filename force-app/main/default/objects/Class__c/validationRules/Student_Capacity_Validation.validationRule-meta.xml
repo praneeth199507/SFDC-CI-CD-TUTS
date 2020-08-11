@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Student_Capacity_Validation</fullName>
+    <active>false</active>
+    <errorConditionFormula>Students_Capacity__c  &gt; 50</errorConditionFormula>
+    <errorMessage>Student Capacity exceeded Max Value of 50</errorMessage>
+</ValidationRule>

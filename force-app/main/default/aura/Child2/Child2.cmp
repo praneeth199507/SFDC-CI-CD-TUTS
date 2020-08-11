@@ -1,0 +1,11 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,lightning:actionOverride" access="global" >
+ <aura:method name="fetch" action="{!c.fetchData}" access="public">
+     <aura:attribute name="first" type="String" />
+     
+    </aura:method>
+    <lightning:card>
+     A value in child component = {!v.first}
+        <BR/>
+     B value in child component = {!v.second}
+    </lightning:card>
+</aura:component>

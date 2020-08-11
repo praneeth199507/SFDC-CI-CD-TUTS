@@ -1,0 +1,6 @@
+<aura:event type="APPLICATION" description="Event template" >
+    <aura:attribute name="empName" type="String"/>
+    <aura:attribute name="age" type="String"/>
+    
+    
+</aura:event>

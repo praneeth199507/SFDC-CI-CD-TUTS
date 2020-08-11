@@ -1,0 +1,27 @@
+<apex:page sidebar="FALSE" showheader="TRUE" >
+<h1>Congratulations Praneeth</h1><BR/><BR/>
+<h1>On Starting Your First Apex Page </h1><BR/><BR/>
+<apex:form id="Na_Istham">
+<apex:pageblock title="First Block" >
+<apex:pageblockSection title="First section" >
+<apex:pageblocksectionItem >Praneeth</apex:pageblocksectionItem>
+<apex:pageblocksectionItem >Krishna</apex:pageblocksectionItem>
+<apex:pageblocksectionItem >Reddy</apex:pageblocksectionItem>
+</apex:pageblockSection>
+<apex:pageblockSection title="Second section">  user.name
+<apex:pageblocksectionItem >NR</apex:pageblocksectionItem>
+<apex:pageblocksectionItem >Reddy</apex:pageblocksectionItem>
+</apex:pageblockSection> 
+ </apex:pageblock>
+ 
+ <apex:pageblock title="Second Block">
+ <apex:pageblocksection title="First Section" > firstexample : Get Started<br/>
+ </apex:pageblocksection> 
+ </apex:pageblock>
+<div align="center"  >
+<apex:commandButton value="Dummy Save"/>
+<apex:commandButton value="Dummy Cancel"/>
+<apex:commandButton value="Dummy Edit"/>
+</div>
+</apex:form>
+</apex:page>

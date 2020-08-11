@@ -1,0 +1,51 @@
+<aura:component >
+    <aura:attribute name="sname" type="String"/>
+    <aura:attribute name="scity" type="String"/>    
+    <lightning:card title="Students" class="box" >
+    <lightning:input label="Name" type="text" value="{!v.sname}"/>
+    <lightning:input label="Enter City" type="text" value="{!v.scity}"/>
+    <lightning:input label="Enter Salary" type="Number" placeholder="Enter Salary"/><BR/>
+    <lightning:input label="Active" type="checkBox"/><BR/>
+    <lightning:input label="Status" type="toggle"/><BR/>
+      </lightning:card>
+    <BR/><BR/><BR/><BR/>
+    {!v.sname}<BR/>
+    {!v.scity}
+    
+    <lightning:card title="Student Name" class="boxtwo">
+        <lightning:input label='First Name' aura:id="fname" />
+		<lightning:input label='Last Name' aura:id="lname" />
+		<lightning:input label='Name' aura:id="name" />   
+        <aura:set attribute="footer">
+           <lightning:button label='Submit' onclick="{!c.append}"/>
+        <lightning:button label='Cancel' onclick="{!c.dispend}"/>  
+        </aura:set>
+           </lightning:card>
+
+    <lightning:accordion>
+        <lightning:accordionsection label="Jump" class="boxtwo">
+        <lightning:card title="Student Name" class="boxtwo">
+        <lightning:input label='First Name' aura:id="fname" />
+		<lightning:input label='Last Name' aura:id="lname" />
+		<lightning:input label='Name' aura:id="name" />   
+        <aura:set attribute="footer">
+           <lightning:button label='Submit' onclick="{!c.append}"/>
+        <lightning:button label='Cancel' onclick="{!c.dispend}"/>  
+        </aura:set>
+           </lightning:card>
+        </lightning:accordionsection>
+        
+        <lightning:accordionsection label="Jump2">
+        <lightning:card title="Student Name" class="boxtwo">
+        <lightning:input label='First Name' aura:id="fname" />
+		<lightning:input label='Last Name' aura:id="lname" />
+		<lightning:input label='Name' aura:id="name" />   
+        <aura:set attribute="footer">
+           <lightning:button label='Submit' onclick="{!c.append}"/>
+        <lightning:button label='Cancel' onclick="{!c.dispend}"/>  
+        </aura:set>
+           </lightning:card>
+        </lightning:accordionsection>
+    
+    </lightning:accordion>
+</aura:component>

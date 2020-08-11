@@ -1,0 +1,18 @@
+<aura:component >
+    <aura:attribute name="empname" type="String"/>
+    <aura:attribute name="experience" type="Decimal" default="3"/>
+    <aura:attribute name="Salary" type="Decimal" required="true"/>
+    <aura:attribute name="City" type="String"/>
+    <div>
+     Salary : {!v.empname}<br/>
+    Experience : {!v.experience}<br/>
+    Salary : {!v.Salary}<br/>
+    City : {!v.City}<br/><br/><br/>
+    </div>
+    <c:Second_Component empname2="Second Component"/>
+     <c:Second_Component empname2="Third Component"/>
+     <c:Second_Component empname2="Fourth Component"/>
+     <c:Second_Component empname2="Fifth Component"/>
+   
+    
+</aura:component>

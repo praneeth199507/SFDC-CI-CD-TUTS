@@ -1,0 +1,28 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+    <aura:attribute name="cname" type="string" default=""/>
+    <aura:attribute name="cogname" type="string" default=""/>
+    <aura:attribute name="percentage" type="integer" default=""/>
+    <aura:attribute name="deledudetails" type="list" default="[]"/>
+    <aura:attribute name="indexNo" type="integer" default=""/>
+       <aura:attribute name="headee" type="string" default="Education Details ->"/>
+
+   
+    
+         <div class="slds-m-top-large">
+             <div class="slds-page-header">
+      <div class="slds-align_absolute-center"> 
+          <div class="slds-text-heading--small">
+         {!v.headee} {!v.indexNo}               </div>
+            </div>
+       </div>
+    </div>
+    
+    <div class="slds-size_3-of-7">
+    <lightning:input label="Course" name="ecourse" required="true" value="{!v.cname}"/>
+    <lightning:input label="College" name="college" required="true" value="{!v.cogname}"/>
+    <lightning:input label="CGPA" name="marks" required="true" value="{!v.percentage}"/>
+    <lightning:button iconName="utility:delete" variant="border-filled" label = "Delete Educational Details" onclick="{!c.deldetails}"/>
+
+    </div>       
+</aura:component>

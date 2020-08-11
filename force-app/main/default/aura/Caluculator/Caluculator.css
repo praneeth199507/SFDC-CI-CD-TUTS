@@ -1,0 +1,21 @@
+.THIS {
+    
+    color:red;
+}
+
+.THIS.box {
+    color:blue;
+    margin-left: 50px;
+    margin-top:50px;
+}
+
+.THIS.bigbox {
+    
+    Margin-left:250Px;
+    margin-Top:70Px;
+    width:400Px;
+    height:200px;
+    background:black;
+    border:2px solid green;
+    
+}

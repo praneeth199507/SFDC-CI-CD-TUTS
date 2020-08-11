@@ -1,0 +1,45 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="accrec" type="Account"/>
+    <aura:attribute name="newrec" type="Account"/>
+    <aura:handler name="init" value="{!this}" action="{!c.handleNew}"/>
+    <force:recordData aura:id="showRecords"
+                      recordId = "{!v.recordId}"
+                      layoutType="FULL"
+                      targetFields= "{!v.accrec}"
+                      mode="EDIT"
+    				  targetError="{!v.error}"
+                      recordUpdated="{!c.handlerecordchanges}"/>
+    
+    <force:recordData aura:id="createRecord"
+                      layoutType="FULL"
+                      targetFields= "{!v.newrec}"
+    				  targetError="{!v.error}"
+                      recordUpdated="{!c.handlerecordchanges}"/>
+    
+
+    <lightning:card title="Accounts" iconName="standard:account" >
+  	<div class="mystyle">
+        <lightning:input label="Account Name" value="{!v.accrec.Name}"/> 
+         <lightning:input label="Industry" value="{!v.accrec.Industry}"/> 
+         <lightning:input label="Phone" value="{!v.accrec.Phone}"/> 
+          <br/>
+          <lightning:buttonGroup>
+          <lightning:button label="Save" variant="brand" onclick="{!c.handleSaveRecord}" />
+          <lightning:button label="Delete" variant="destructive" onclick="{!c.handleDelete}"/>
+		</lightning:buttonGroup>
+    </div>   
+    </lightning:card>
+    
+    
+     <lightning:card title="Create Accounts" iconName="standard:account" >
+  	<div class="mystyle2">
+        <lightning:input label="Account Name" value="{!v.newrec.Name}"/> 
+         <lightning:input label="Industry" value="{!v.newrec.Industry}"/> 
+         <lightning:input label="Phone" value="{!v.newrec.Phone}"/> 
+          <br/>
+          <lightning:buttonGroup>
+              <lightning:button label="Create" variant="brand" onclick="{!c.handleCreate}"/>
+		</lightning:buttonGroup>
+    </div>   
+    </lightning:card>
+</aura:component>

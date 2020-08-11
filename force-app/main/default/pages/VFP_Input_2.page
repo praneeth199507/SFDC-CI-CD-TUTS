@@ -1,0 +1,42 @@
+<apex:page showHeader="false">
+    <apex:tabPanel switchType="client">
+        <apex:tab label="Details" >
+        <apex:panelBar >
+     <apex:panelBarItem label="Item1">Hello Praneeth</apex:panelBarItem>
+        <apex:panelBarItem label="Item2">Im the founder of Salesforce</apex:panelBarItem>
+        <apex:panelBarItem label="Item3">Inkem Panileda Anni Chustunav</apex:panelBarItem>
+        <apex:panelBarItem label="Item4" onenter="alert('Pani Chusko Bey')" onleave="alert('Baga Ayinda')">HA HA HA</apex:panelBarItem>
+    </apex:panelBar><BR/><BR/>  
+<apex:form >
+    <h1>Please fill in below details ASAP : </h1><BR/><BR/>  
+    <apex:outputLabel Value="Enter Name: " for="name"/>
+    <apex:inputText id="name"/><BR/><BR/>
+    Enter Age : <apex:inputText /><BR/><BR/>
+    Create UserName : <apex:inputText /><BR/><BR/>
+    Create Password : <apex:inputSecret /><BR/><BR/>
+    Enter Description :<apex:inputtextarea /><BR/><BR/>
+    Are You Currently Employed ? <apex:inputCheckbox /><BR/><BR/>
+    <apex:outputLink Value="https://www.myntra.com/">Click Me Dude</apex:outputLink><BR/><BR/>
+    <apex:commandButton value="Save"/><BR/><BR/>
+    </apex:form>  
+            </apex:tab>
+        <apex:tab label="Accounts" >
+            <apex:toolbar >
+                <apex:outputText value="Sample Toolbar"></apex:outputText>
+                <apex:toolbarGroup itemSeparator="line" location="left">
+                  <apex:outputLink value="Salesforce.com">salesforce</apex:outputLink>
+                    <apex:outputLink value="Apex.com">Apex</apex:outputLink>
+                </apex:toolbarGroup>
+                <apex:toolbarGroup itemSeparator="line" location="right">
+                    <apex:form >
+                    <apex:inputText id="Input">Enter Text: </apex:inputText>
+                    <apex:commandLink value="Search"/>
+                        </apex:form>
+                </apex:toolbarGroup>
+            </apex:toolbar>
+            <p>
+                Hello, Wellcome to Accounts page. Please Watch this space for more details
+            </p>
+             </apex:tab>
+    </apex:tabPanel>
+</apex:page>

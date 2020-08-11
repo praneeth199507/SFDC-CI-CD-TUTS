@@ -1,0 +1,5 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+    <lightning:input label="Name" />
+    <lightning:input label= "Age"/>
+    Nmae:
+</aura:component>

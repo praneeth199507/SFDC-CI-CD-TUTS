@@ -1,0 +1,21 @@
+<apex:page controller="FirstAccountController" id="pg">
+    
+    <apex:form id="formfirst">
+        <apex:pageBlock title="Account Info" id="pb">
+        <apex:pageBlockSection title="Account Information" collapsible="false" id="pbs">
+        <apex:inputField value="{!acc.name}"/>
+        <apex:inputField value="{!acc.phone}"/>
+        <apex:inputField value="{!acc.industry}"/>
+        <apex:inputField value="{!acc.type}"/>
+        <apex:inputField value="{!acc.rating}"/>
+            </apex:pageBlockSection> 
+             <apex:pageMessages />
+              <apex:pageBlockSection title="Additional Information" collapsible="false" id="pbss">                 
+        <apex:inputField value="{!acc.CustomerPriority__c}" id="cp"/>
+        <apex:inputField value="{!acc.SLAExpirationDate__c}" id="ed"/>
+            </apex:pageBlockSection>      
+        <apex:commandButton value="save" action="{!save}"/>
+        </apex:pageBlock>
+   
+    </apex:form>
+</apex:page>
