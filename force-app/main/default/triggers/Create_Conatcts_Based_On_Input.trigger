@@ -1,7 +1,7 @@
 trigger Create_Conatcts_Based_On_Input on Account (After insert,After update) {
     Map<id,Decimal> mymap = new  Map<id,Decimal>();
     for(Account a : Trigger.new){ 
-        mymap.put(a.id,a.NumberofLocations__c);
+        mymap.put(a.id,12);
     }
     
     List<Contact> con = new List<contact>();
